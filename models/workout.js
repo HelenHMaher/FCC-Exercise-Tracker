@@ -10,9 +10,9 @@ const Workout = new Schema({
     maxlength: [100, "description cannot exceed 100 characters"],
   },
   duration: {
-    type: String,
+    type: Number,
     required: true,
-    maxlength: [25, "duration cannot exceed 25 characters"],
+    maxlength: [5, "duration cannot exceed 5 characters"],
   },
   date: {
     type: Date,
@@ -25,5 +25,6 @@ const Workout = new Schema({
     index: true,
   },
 });
+
 
 module.exports = mongoose.model("Workout", Workout);
